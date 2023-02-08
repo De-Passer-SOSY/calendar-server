@@ -1,0 +1,20 @@
+database Calendar
+
+table Events
+- eventId int (PK)
+- startDate date
+- endDate? date
+- addedBy int (FK userId)
+- notes? varchar(1024)
+- location? varchar(128)
+
+table UserEvents
+- eventId int (PK)
+- userId int (PK)
+
+table Users
+- userId int (PK)
+- name varchar(128)
+- password bits
+- email varchar(128)
+- birthdate date
